@@ -1,0 +1,27 @@
+.login_form form{
+      font-family: Cenntury Gothic;
+    border: 3px solid #f1f1f1;
+    text-align: center;
+    font-size:20px;
+    background-color: #f1f1f1;
+    margin-left: 500px;
+    transform: translate(-15%, -25%);
+    width:40%
+}
+
+.container {
+    padding: 16px;
+}
+
+.login_form form button{
+    padding:12px 10px;
+  background: #111;
+  font-size: 20px;
+  color:#eeeeee;
+  border: none;
+  cursor: pointer;
+}
+
+.login_form form button:hover{
+     background-color: #444;
+}

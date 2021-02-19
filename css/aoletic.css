@@ -1,0 +1,444 @@
+html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #192231;
+    margin: auto 0%;
+    display: grid;
+    width:100%;
+      overflow-x: hidden;
+
+ 
+}
+
+.resetka {
+    display: grid;
+    grid-template-columns:auto auto auto;
+    row-gap: 30px;
+    padding: 2%;
+}
+
+.zaglavje{
+
+    grid-row:1;
+    grid-column:1 / span 3;
+    
+}
+
+.podnozje{
+
+    grid-row:4;
+    grid-column:1/span 3;
+    height:70px;
+    position:fixed;
+   left: 60px;
+   right:60px;
+   bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    color:white;
+    text-align: center;
+    font-size:20px;
+    transition: 0.5s;
+}
+
+header {
+    z-index: 1;
+    top: 0;
+    
+     
+}
+
+  .resetka {
+    background-image: url(../multimedija/prva_slika.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.header-form {
+   float:right;
+   font-size: 20px;
+  cursor: pointer;
+  margin-top: -87px;
+  border: none;
+  padding: 20px 100px;
+
+}
+
+.header-form p {
+    color: whitesmoke;  
+    padding-left: 20px;
+}
+
+.header-form form > button{
+    
+  padding:12px 10px;
+  background: #111;
+  font-size: 20px;
+  color:#eeeeee;
+  border: none;
+  cursor: pointer;
+  margin-left:-6px;
+
+    
+    
+    
+}
+ .header-form form > a {
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: solid #111 1pt;
+    color: #111;
+    font-size: 20px;
+    transition: 0.4s;
+    margin-left:10px;
+
+}
+
+.header-form form > button:hover, .header-form form > a:hover {
+    border-bottom-color: #eeeeee;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+   transition-duration: 0.4s;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+#sidebar_push{
+    transition: margin-left .5s;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+.naslov{
+   font-size: 40px;
+   font-weight: 40;
+   grid-row:2;
+   grid-column:1/ span 3;
+   transform: translate(25%,-40%);
+
+   
+}
+.info_podrucje{
+    grid-row:3;
+    grid-column:2;
+    transform: translate(5%,-160%);
+}
+.info_gumb{
+    
+    font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  transition-duration: 0.4s;
+
+}
+
+.info_gumb:hover{
+/* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
+background-color: #444;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#exit_text{
+    font-size:20px;
+     position: absolute;
+  top: 80%;
+  left: 50%;
+
+  color: white;
+  transform: translate(10%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.login_form{
+    grid-row:3;
+    grid-column:1;
+}
+
+.popis_vrtica{
+    grid-row:3;
+    grid-column:1;
+    transform: translate(25%, -25%);
+}
+.popis_vrtica table {
+    /*display: block;*/
+    overflow-x: scroll;
+}
+
+.popis_vrtica table, th, td {
+    border: 1px solid #111;
+}
+
+.popis_vrtica th {
+    padding: 15px 15px;
+    vertical-align: middle;
+    border-bottom: 2px solid #111;
+    border-right: 2px solid #111;
+    background-color: #111;
+    color: white;
+}
+
+.popis_vrtica td {
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+     
+}
+
+.popis_vrtica iframe {
+    border: 2px;
+}
+
+.popis_vrtica tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.popis_vrtica tr:nth-child(odd) {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.popis_vrtica tr:hover{
+    background-color:rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+
+.popis_poziva{
+    grid-row:3;
+    grid-column:1;
+    transform: translate(5%, -25%);
+}
+.popis_poziva th {
+    padding: 15px 15px;
+    vertical-align: middle;
+    border-bottom: 2px solid #111;
+    border-right: 2px solid #111;
+    background-color: #111;
+    color: white;
+}
+
+.popis_poziva td {
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+     
+}
+
+.popis_poziva iframe {
+    border: 2px;
+}
+
+.popis_poziva tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.popis_poziva tr:nth-child(odd) {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.popis_poziva tr:hover{
+    background-color:rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+.popis_vrticaadmin{
+    grid-row:3;
+    grid-column:1;
+    transform: translate(15%, -25%);
+}
+.popis_vrticaadmin table {
+    /*display: block;*/
+    overflow-x: scroll;
+}
+
+.popis_vrticaadmin table, th, td {
+    border: 1px solid #111;
+}
+
+.popis_vrticaadmin th {
+    padding: 15px 15px;
+    vertical-align: middle;
+    border-bottom: 2px solid #111;
+    border-right: 2px solid #111;
+    background-color: #111;
+    color: white;
+}
+
+.popis_vrticaadmin td {
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+     
+}
+
+.popis_vrticaadmin iframe {
+    border: 2px;
+}
+
+.popis_vrticaadmin tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.popis_vrticaadmin tr:nth-child(odd) {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.popis_vrticaadmin tr:hover{
+    background-color:rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+
+
+
+
+.aktivacijskitekst{
+    grid-row:3;
+    grid-column:2;
+    transform: translate(5%,-160%);
+    font-size: 20px;
+}
+
+.lozinkatekst{
+    grid-row:3;
+    grid-column:2;
+    transform: translate(5%,-140%);
+    font-size: 20px;
+    
+}
+
+.logingumb{
+    font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+   transition-duration: 0.4s;
+}
+
+
+.naslov3{
+   font-size: 40px;
+   font-weight: 40;
+   grid-row:2;
+   grid-column:1/ span 3;
+   transform: translate(10%,-40%);
+
+   
+}
+
+.sadrzaj_dokumentacije{
+      grid-row:2;
+   grid-column:1;
+    
+}
+
+
+
+
+    
+    

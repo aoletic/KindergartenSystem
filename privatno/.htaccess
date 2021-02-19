@@ -1,0 +1,4 @@
+AuthType Basic
+AuthUserFile /var/www/WebDiP/2019_projekti/WebDiP2019x091/privatno/user.txt
+AuthName "Apache Login - Ispis korisnika"
+Require valid-user

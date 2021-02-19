@@ -1,0 +1,331 @@
+<?php include 'Session/sesion_class.php';
+Sesija::kreirajSesiju();
+
+
+?>
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>O autoru</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="aoletic">
+        <meta name="descriptin" content="Početna stranica WebDiP projekta">
+        <meta name="keywords" content="WebDiP, Projekt, Vrtić">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/aoletic.css" rel="stylesheet" type="text/css">
+             <script type ="text/javascript" src="jquery/aoletic_jquery.js"></script>
+
+    </head>
+
+
+
+
+    <body  class="resetka">
+        <header class="zaglavje"> 
+            <nav>
+                <ul>
+                    <li><a href="index.php" >Početna</a></li>
+                </ul>
+            </nav>
+
+
+
+        </header>
+        <div class="naslov">
+            <h1>DOKUMENTACIJA</h1>
+        </div>
+      
+         <div class="sadrzaj_dokumentacije" style="grid-row:3;grid-column:1/span 2;">
+            <div  style="margin-left:30px;">
+                <h3>ERA model</h3>
+                <a href="multimedija/ERA_vrtici_final.jpg">
+                    <img src="multimedija/ERA_vrtici_final.jpg"  style="width:200px;height:200px;" alt="era">
+                        
+                </a>
+                <p style="background-color: rgba(0,0,0,0.8);color:white;">ERA model sastoji se od 13 tablica. Korisnik je tablica u kojoj su evidentirani svi korisnici naše web aplikacije.
+                    Tablica korisnik povezana je na tablicu uloga u kojoj su definirane tri uloge koje su moguće u našoj aplikaciji.
+                    Jedna uloga može imati više korisnika, dok jedan korisnik može imati samo jednu ulogu. Svaka radnja koja se odvija u našoj web aplikaciji
+                    zapisuje se u tablici dnevnik. Nazivi svih radnji definirani su u tablici tip. Pošto je naša web aplikacija napravljena na temu "Dječjih vrtića", 
+                    većina toga se odvija oko tablice vrtić. Vrtić može imati više djece, dok jedno dijete može pripadati samo u jedan vrtić. Za jedno dijete može
+                    biti evidentirano više dolazaka dok je u jedan dolazak moguće evidentirati samo jedno dijete. Vrtić može imati više ocjena, dok jedna ocjena
+                    može biti samo za jedan vrtić. Za vrtić može biti izdano više računa, dok se jedan račun odnosi samo na jedan vrtić. 
+                    </p>
+            </div>
+            <div  style="margin-left:30px;">
+                <h3>Navigacijski dijagram</h3>
+                <a href="multimedija/aoletic_navfinal.png">
+                    <img src="multimedija/aoletic_navfinal.png"  style="width:200px;height:200px;" alt="nav" >
+                </a>  
+                    <p style="background-color: rgba(0,0,0,0.8);color:white;">Navigacijski dijagram prikazuje koje sve mogućnosti imaju određeni korisnici u našoj web aplikaciji.
+                        Neregistrirani korisnik može pristupiti radnjama obojanim bijelom bojom. Registrirani korisnik, u našoj web aplikaciji "Roditelj", može pristupiti
+                        radnjama u plavoj boji. Moderator, u našoj web aplikaciji "Voditelj", može pristupiti radnjama obojanim zelenom bojom te ujedno i radnjama koje su  
+                        dostupne roditelju. Administrator može pristupiti radnjama obojanim crvenom bojom te ujedno i radnjama koje su vezane za voditelja te roditelja.
+                    </p>
+            </div>
+            <div  style="margin-left:30px;">
+                <h3>Opis projektnog zadatka</h3>
+                 <p style="background-color: rgba(0,0,0,0.8);color:white;">Projektni zadatak "Dječji vrtići" namijenjen je za upravljanje dječjim vrtićima. Vrlo lako možemo dodati nove
+                 funkcionalnosti koje bi kupac aplikacije kasnije mogao zahtjevati. Aplikacijom se upravlja ovisno o ulozi koju korisnik aplikacije ima. </p>
+
+            </div>
+            <div  style="margin-left:30px;">
+                <h3>Opis projektnog rješenja</h3>   
+                 <p style="background-color: rgba(0,0,0,0.8);color:white;">Cijela web aplikacija temelji se na centraliziranoj bazi podataka koju smo opisali u našem ERA modelu.
+                 Projektno rješenje organizirano je kroz 4 uloge koje imaju različite ovlasti. Neregistrirani korisnik osoba je koja nije registrirana u našoj web aplikaciji.
+                 Neregistrirani korisnik može pristupiti popisu dječjih vrtića zajedno s njihovom prosječnmom ocjenom za zadnja tri mjeseca te može pretraživati i javne pozive 
+                 za upis. Može vidjeti podatke o autoru web aplikacije te dokumentaciju. Možete pristupiti registraciji i prijavi, no naravno ukoliko nije registriran,
+                 neće se moći prijaviti. Registracijom može postati registrirani korisnik web aplikacije. Registrirani korisnik je osoba koja je registrirana u našoj
+                 web aplikaciji. Može pregledati popis prijava za upis vrtića te u te iste prijave može prijaviti svoje dijete. Registrirani korisnik može
+                 pregledati sve svoje prijave te vidjeti informaciju o tome da li mu je dijete prihvaćeno. Nakon što vidi da mu je dijete prihvaćeno, može nastaviti upis dijeteta
+                 ili odustati od prijave. Ukoliko se odluči na upisivanje djeteta, upisuje dodatne informacije o djetetu. Može vidjeti popis dolazaka svojeg djeteta u vrtić po 
+                 mjesecima. Može vidjeti popis računa te može označiti određeni račun da je plaćen. Registrirani korisnik može postati voditelj ukoliko mu administrator 
+                 dodijeli tu ulogu. On može kreirati skupine u vrtiću za koji je on zadužen sa cijenom na mjesečnoj razini. Kreira javni poziv za upise za njegov vrtić gdje 
+                 definira razdoblje upisa te broj mjesta. Može vidjeti sve prijave za svoje upise te ih ujedno može prihvatiti. Prihvaćuje se onoliko prijava koliko je zadano
+                 u broju mjesta kod upisa. Može evidentirati dolazak djeteta u svoj vrtić te ujedno može izdati račun korisniku za to dijete. Račun se smanjuje za svaki nedolazak.
+                 Može pregledati broj plaćenih i neplaćenih računa za određeno razdoblje. Administrator može kreirati dječje vrtiće te tom vrtiću dodijeliti moderatora. Može vidjeti 
+                 ukupan broj djece po vrtiću sa brojem plaćenih i neplaćenih računa. Svaki mjesec može ocijeniti određeni vrtić u skali od 1 do 10.
+                 </p>
+            </div>
+             
+                  <div  style="margin-left:30px;">
+                <h3>Popis i opis tehnologija i alata</h3>
+                 <p style="background-color: rgba(0,0,0,0.8);color:white;">Korištene tehnologije su HTML, PHP, jQuery, Ajax, MySQL.
+                     Korišteni alati su NetBeans IDE 11.2, MySQL Workbench, FileZilla, MyPHPAdmin, PuTTY, XAMPP te draw.io.
+
+ </p>
+
+            </div>
+           
+        </div>
+                <div class="popis_vrtica" style="grid-row:4;grid-column:1/span 3;margin-bottom: 50px;margin-top: 50px;width:80%; transform: translate(5%, 2%);">
+                       <h3>Popis i opis skripata</h3>
+            <table id="popis_table1">
+                <thead>
+                    <tr>
+                        <th>Naziv skripte</th>
+                        <th>Opis skripte</th>
+                    </tr>
+                </thead>
+                <tbody id="tablica_vrticabody" >
+                     <tr role="row" class="odd">
+                        <th>Popis_djece_racuna.php</th>
+                        <th>Skripta u kojoj se prikazuju popisi broja djece u vrtićima te ujedno i ukupan broj plaćenih i neplaćenih računa u vrtićima.
+                            Skripti može pristupiti samo admin.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Popis_pozivca.php</th>
+                        <th>Skripta pomoću koje neregistrirani korisnik može vidjeti sve pozive na upise.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Popis_vrtica.php</th>
+                        <th>Skripta u kojoj se prikazuje popis s dječjim vrtićima u našoj aplikaciji te njihove prosječne ocjene kroz zadnja tri mjeseca.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>aktivacija_email.php</th>
+                        <th>Skripta na koju se dolazi klikom na aktivacijski link za račun koji korisnik dobiva nakon registracije. Otvaranjem te skripte korisnik
+                            aktivira svoj račun. 
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>evidentirajDolazak.php</th>
+                        <th>Skripta putem koje voditelji vrtića mogu unijeti dolazak djeteta. Može ujedno ažurirati te i obrisati dolazak. 
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>evidentirajDolazakAdmin.php</th>
+                        <th>Skripta putem koje admin vrtića može unijeti dolazak djeteta iz bilo kojeg vrtića. Može ujedno ažurirati te i obrisati dolazak. 
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>forgot_password.php</th>
+                        <th>Skripta koja se izvršava kad korisnik klikne da je zaboravio lozinku. Pritiskum za "zaboravljena lozinka", korisnik unosi email
+                            te se generira nova lozinka koja mu se šalje na unijeti email.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>forma_search_odjava.php</th>
+                        <th>Skripta putem koje je definirano da se gumb odjava pojavljuje samo kod korisnika koji su registrirani.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>index.php</th>
+                        <th>Početna stranica projekta na kojoj je u gornjoj lijevoj strani gumb za otvaranje navigacijskog izbornika.
+                            Klikom na gumb, otvara se izbornik na kojem je ponuđena prijava, registracija, pregled vrtića, pregled upisa, o autoru te dokumentacija.
+                            Prijavom u sustav, izbornik se mijenja ovisno o ulozi.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>kreirajPoziv.php</th>
+                        <th>Skripta pomoću koje voditelj vrtića kreira poziv na upis. Definira broj mjesta te datum od kad do kad su upisi. 
+                            Ukoliko upisi još nisu počeli, može ih mijenjati.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>kreirajPozivAdmin.php</th>
+                        <th>Skripta pomoću koje admin vrtića kreira poziv na upis. Definira vrtić, broj mjesta te datum od kad do kad su upisi. 
+                            Ukoliko upisi još nisu počeli, može ih mijenjati.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>kreirajSkupine.php</th>
+                        <th>Skripta pomoću koje voditelj vrtića kreira skupine u njegovom vrtiću. Također može i ažurirati skupine te obrisati ih.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>kreirajSkupineAdmin.php</th>
+                        <th>Skripta pomoću koje admin kreira skupine u bilo kojem vrtiću. Također može i ažurirati skupine te obrisati ih.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>login.php</th>
+                        <th>Skripta pomoću koje se korisnici prijavljuju u sustav. Provjerava se ukoliko postoje u sustavu, da li je lozinka koju su unijeli točna, 
+                            da li im je račun blokiran te da li im je račun potvrđen. Nakon uspješne prijave, ovisno o ulozi korisnika, kreira se sesija.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>meni.php</th>
+                        <th>Skripta u kojoj je definiran navigacijski izbornik. On se mijenja ovisno o ulozi korisnika u sesiji.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>ocjeniVrtic.php</th>
+                        <th>Skripta pomoću koje admin ocjenjuje željeni vrtić. Unosi ocjenu od 1-10 te se automatski uzima vrijeme kada ocjenjuje.
+                            Također može ažurirati i obrisati ocjene.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>otkljucajRacune.php</th>
+                        <th>Skripta pomoću koje admini može zaključati i otključati račune drugih korisnika.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>pregledajDnevnik.php</th>
+                        <th>Skripta pomoću koje admin može pregledati sve radnje koje su se dogodile u web aplikaciji u razdoblju koji definira pomoću Datetime
+                            pickera.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>pregledajDolaskeKor.php</th>
+                        <th>Skripta u kojoj roditelj može pregledati sve dolaske svojeg djeteta.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>pregledajPrijaveKor.php</th>
+                        <th>Skripta u kojoj roditelj može pregledati prijave koje je poslao za pozive na upis. Vidi da li je njegova prijava prihvaćena, ukoliko je,
+                            može nastaviti upis s unošenjem podataka o svojem djetetu te je nakon toga njegovo dijete upisano u vrtić. 
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>pregledajPrijave.php</th>
+                        <th>Skripta pomoću koje voditelj vrtića pregledava i prihvaćuje prijave roditelja za upise u svoj vrtić.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>pregledajPrijaveAdmin.php</th>
+                        <th>Skripta pomoću koje admin pregledava i prihvaćuje prijave roditelja za upise u bilo koji vrtić.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>pregledajRacune.php</th>
+                        <th>Skripta pomoću koje voditelj vrtića pregledava sve račune vezane za njegov vrtić. Odabire razdoblje od kad do kad želi vidjeti račune te se
+                            ti i prikazuju.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>pregledajRacuneKor.php</th>
+                        <th>Skripta pomoću koje roditelj pregledava sve račune vezane za njegovo dijete. Može unijeti da li je njegov račun plaćen ili ne.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>prijaviDijete.php</th>
+                        <th>Skripta pomoću koje korisnik može prijaviti dijete u željenu skupinu.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>registracija.php</th>
+                        <th>Skripta koja je zadužena za registraciju korisnika u sustav. Neregistrirani korisnik unosi svoje podatke uz razne provjere od PHP-a te Javascript-a.
+                            Ukoliko svi podaci zadovoljavaju, račun je kreiran te korisnik dobiva aktivacijski email.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>upiti.php</th>
+                        <th>Skripta u kojoj je većina upita vezanih za prikazivanje podataka iz baze podataka.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>upravljajVrticima.php</th>
+                        <th>Skripta pomoću koje admin kreira vrtiće, ažurira ih te ih može i obrisati.
+                        </th>
+                    </tr>
+                    
+          
+          </tbody>
+            </table>
+        </div>
+          <div class="popis_poziva" style="grid-row:5;grid-column:1/span 3;margin-bottom: 50px;margin-top: 50px;width:80%;transform: translate(5%, -10%);">
+                    <h3>Popis i opis vanjskih bilbioteka</h3>
+            <table id="popis_table2">
+                <thead>
+                    <tr>
+                        <th>Naziv skripte</th>
+                        <th>Opis skripte</th>
+                    </tr>
+                </thead>
+                 
+                <tbody id="tablica_pozivabody">
+                    <tr>
+                        <th>baza_class.php</th>
+                        <th>Koristi se za pristup te izvršavanje upita nad bazom podataka.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>session_class.php</th>
+                        <th>Koristi se za kreiranje sesije te dohvaćanje trenutno prijavljenog.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>aoletic_jquery.js, aoletic_registracija.js, aoletic_sidebar.js</th>
+                        <th>Koriste se za realizaciju JavaScript funkcionalnosti.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>dataTable</th>
+                        <th>Koristi se za realizaciju straničenja, pretraživanja te sortiranja kod tabličnih prikaza.
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Font Awesome</th>
+                        <th>Koristi se dohvaćanje fontova.
+                        </th>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <footer class="podnozje" id="podnozje_push">
+            <address>
+                Kontakt:
+                <a href="mailto:aoletic@foi.hr" style="color:white">Antonio Oletić</a>
+                <p>&copy; 2020</p>
+            </address>
+        </footer>
+    </body>
+
+
+
+
+
+</html>
